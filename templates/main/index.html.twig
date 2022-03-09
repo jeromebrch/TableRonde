@@ -1,0 +1,259 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+
+    <div>
+        <nav>
+            <div>
+                <img class="header_logo" src="{{ asset('img/logo-vertical-trf-couleur-light.png') }}" alt="logo table ronde" title="round table logo" />
+            </div>
+            <div>
+                <a href="#intro_section">INTRO</a>
+                <a href="#schedule_section">SCHEDULE</a>
+                <a href="#perigueux_section">PÉRIGUEUX</a>
+                <a href="#pricing_section">PRICING & INFO</a>
+                <a class="registration_link" href="#form_section">REGISTRATION</a>
+                <a class="facebook_link" target="_blank" href="https://www.facebook.com/tablerondeperigueux"><img class="link_logo" src="{{ asset('img/facebook.png') }}" alt="facebook_logo" title="facebook_logo" /></a>
+            </div>
+        </nav>
+
+        {# MAIN SECTION #}
+        <section id="main_section" class="main_section">
+            <div>
+                <div>
+                    <img class="general_logo" src="{{ asset('img/logo-vertical-trf-couleur-light.png') }}" alt="perigueux_logo" title="perigueux_logo" />
+                </div>
+                <div>
+                    <p class="grey_title">
+                        03 - 05 June 2022
+                    </p>
+                </div>
+                <div>
+                    <p class="white_title">
+                        Round Table 24
+                    </p>
+                </div>
+                <div>
+                    <p class="red_title">
+                        Euromeeting 2022
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="intro_arrow_section">
+            <a href="#intro_section"><img class="intro_link" src="{{ asset('img/play-button.png') }}" alt="intro_link" title="intro_link" /></a>
+        </div>
+
+        {# INTRO SECTION #}
+        <section id="intro_section" class="intro_section">
+            <h1 class="blue_title">Welcome to the EURO MEETING PERIGUEUX 2022</h1>
+            <h2 class="red_subtitle">which will take place<br /> on 03 05 and 05 June 2022</h2>
+            <p>
+                The round table of périgueux exists since 1963<br /><br />
+                Our first Euro Meeting was organized in 2013 or for the oldest, you could live an exceptional experience.<br />
+                Live or relive an exceptional experience in the South West of France.<br /><br />
+                Lots of fun and surprises await you!<br /><br />
+                We are waiting for you.<br />
+                We are delighted to welcome you!
+            </p>
+        </section>
+
+        {# PARTY SECTION #}
+        <section id="party_section" class="party_section">
+            <div>
+                <a target="_blank" href="https://www.youtube.com/watch?v=eTN_hr_jltU"><img class="party_link" src="{{ asset('img/play-button.png') }}" alt="intro_link" title="intro_link" /></a>
+                <h3 class="party_title">We like to party ! </h3>
+            </div>
+        </section>
+
+        {# SCHEDULE SECTION #}
+        <section id="schedule_section" class="schedule_section">
+            <h3 class="blue_title">Euromeeting 2022</h3>
+            <h4 class="red_subtitle">Schedule</h4>
+            <div class="schedule_button_container">
+                <button id="schedule_button_1" type="button">Friday 03rd JUNE</button>
+                <button id="schedule_button_2" type="button">Saturday 04 JUNE </button>
+                <button id="schedule_button_3" type="button">Sunday 05 JUNE</button>
+            </div>
+            <div class="schedule_container">
+                <div id="schedule_1">
+                    <div class="white_schedule schedule">
+                        <img src="{{ asset('img/bus-scolaire.png') }}" alt="transport" title="transport" />
+                        <div>
+                            <h6>Transportation from Bordeaux airport to Perigueux by bus</h6>
+                            <p>
+                                We have planned a bus to come to Perigueux and bring you to the airport<br />
+                                Departure Bus 16h (to be refined according to flight schedules)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="schedule">
+                        <img src="{{ asset('img/beer-mug.png') }}" alt="party" title="party" />
+                        <div>
+                            <h6>Friendly Guinguette meal in the evening from</h6>
+                        </div>
+                    </div>
+                </div>
+                <div id="schedule_2">
+                    <div class="white_schedule schedule">
+                        <img src="{{ asset('img/reunion.png') }}" alt="speach" title="speach" />
+                        <div>
+                            <h6>10am -> kick-off and word from the TRF71 president</h6>
+                        </div>
+                    </div>
+                    <div class="schedule">
+                        <img src="{{ asset('img/surprise.png') }}" alt="surprise" title="surprise" />
+                        <div>
+                            <h6>The rest is a huge surprise !</h6>
+                        </div>
+                    </div>
+                </div>
+                <div id="schedule_3">
+                    <div class="white_schedule schedule">
+                        <img src="{{ asset('img/en-train-de-dormir.png') }}" alt="rest" title="rest" />
+                        <div>
+                            <h6>For sure, the best part of the weekend = rest</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {# PÉRIGUEUX SECTION #}
+        <section id="perigueux_section" class="perigueux_section">
+            <div>
+                <a target="_blank" href="https://www.tourisme-grandperigueux.fr/en/useful-information/how-to-get-to-perigueux/">
+                    <img class="general_logo" src="{{ asset('img/perigueux_logo.png') }}" alt="périgueux" title="périgueux" />
+                </a>
+                <div id="map"></div>
+            </div>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2XoAdYBK8j0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        {# MEMORY LANE SECTION #}
+        <section id="memory_lane_section" class="memory_lane_section">
+            <h3 class="blue_title">Slide through</h3>
+            <h4 class="red_subtitle">Memory lane...</h4>
+            <div class="container_memory_lane_pictures">
+                <img src="{{ asset('img/IMG_0413 (1).jpg') }}" alt="IMG01" title="memory lane 01" />
+                <img src="{{ asset('img/IMG01.png') }}" alt="IMG02" title="memory lane 02" />
+                <img src="{{ asset('img/IMG02.png') }}" alt="IMG03" title="memory lane 03" />
+                <img src="{{ asset('img/IMG03.png') }}" alt="IMG04" title="memory lane 04" />
+                <img src="{{ asset('img/IMG04.png') }}" alt="IMG05" title="memory lane 05" />
+                <img src="{{ asset('img/IMG05.png') }}" alt="IMG06" title="memory lane 06" />
+                <img src="{{ asset('img/IMG06.png') }}" alt="IMG07" title="memory lane 07" />
+                <img src="{{ asset('img/IMG07.png') }}" alt="IMG08" title="memory lane 08" />
+                <img src="{{ asset('img/IMG08.png') }}" alt="IMG09" title="memory lane 09" />
+            </div>
+        </section>
+
+        {# PRICING SECTION #}
+        <section id="pricing_section" class="pricing_section">
+            <h3 class="blue_title">Pricing &</h3>
+            <h4 class="red_subtitle">information</h4>
+            <div class="pricing">
+                <img src="{{ asset('img/money.gif') }}" alt="price" title="price" />
+                <button type="button">ONE PRICE ONLY</button>
+                <h5 class="blue_title">€300</h5>
+                <a href="#form_section">REGISTER</a>
+            </div>
+        </section>
+
+        {# FORM SECTION #}
+        <section id="form_section" class="form_section">
+            <h2 class="white_subtitle">Euromeeting 2022</h2>
+            <h3 class="red_subtitle">Registration</h3>
+            {# TODO : intégrer le formulaire #}
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdv96WSgKBGqE1pLk0vAp83eL4JmnL4anUnJr-I80UGH9kpBw/viewform?embedded=true" width="640" height="947" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+        </section>
+
+        <footer>
+            <img src="{{ asset('img/logo-vertical-trf-couleur-light.png') }}" alt="table ronde 71" title="table ronde 71" />
+            <p>
+                &copy; Table Ronde Périgueux 71<br />
+                <em>Website by IT SOLUTION - BRIANCHON Jérôme</em>
+            </p>
+        </footer>
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        window.addEventListener('load', function (){
+
+            var map = L.map('map').setView([45.1842, 0.716667], 8);
+            let scheduleBtn1 = $('#schedule_button_1');
+            let scheduleBtn2 = $('#schedule_button_2');
+            let scheduleBtn3 = $('#schedule_button_3');
+            let schedule1 = $('#schedule_1');
+            let schedule2 = $('#schedule_2');
+            let schedule3 = $('#schedule_3');
+
+            //MAP SCRIPT
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiamVyb21lYnJjaCIsImEiOiJjbDBpNzhlbjQwMTlrM2RwaHh5czVzMnY4In0.77Z3eLZn2VyurcgOrxEjbQ', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1,
+                accessToken: 'your.mapbox.access.token'
+            }).addTo(map);
+
+            //SCHEDULE BUTTON SCRIPT
+            scheduleBtn1.on('click', function (){
+                $(this).css('background-color', '#004489');
+                scheduleBtn2.css('background-color', '#E74C3C');
+                scheduleBtn3.css('background-color', '#E74C3C');
+                schedule1.show(200);
+                schedule2.hide(200);
+                schedule3.hide(200);
+            });
+            scheduleBtn2.on('click', function (){
+                $(this).css('background-color', '#004489');
+                scheduleBtn1.css('background-color', '#E74C3C');
+                scheduleBtn3.css('background-color', '#E74C3C');
+                schedule2.show(200);
+                schedule1.hide(200);
+                schedule3.hide(200);
+            });
+            scheduleBtn3.on('click', function (){
+                $(this).css('background-color', '#004489');
+                scheduleBtn2.css('background-color', '#E74C3C');
+                scheduleBtn1.css('background-color', '#E74C3C');
+                schedule3.show(200);
+                schedule2.hide(200);
+                schedule1.hide(200);
+            });
+
+            schedule1.hide();
+            schedule2.hide();
+            schedule3.hide();
+
+            scheduleBtn1.click();
+
+            if(window.pageYOffset > 200){
+                $('nav').css('padding', '5px 100px 5px 100px');
+                $('nav').css('background-color', '#004489');
+                $('.header_logo').css('width', '40px');
+            }
+
+            $('body').on('wheel', function (){
+                if(window.pageYOffset > 200){
+                    $('nav').css('padding', '5px 100px 5px 100px');
+                    $('nav').css('background-color', '#004489');
+                    $('.header_logo').css('width', '40px');
+                }else{
+                    $('nav').css('padding', '25px 100px 25px 100px');
+                    $('nav').css('background-color', '#00448900');
+                    $('.header_logo').css('width', '70px');
+                }
+            })
+        })
+    </script>
+{% endblock %}
