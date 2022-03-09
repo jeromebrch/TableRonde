@@ -295,11 +295,9 @@ nav a{
     height: 5px;
     border-radius: 20px; /* roundness of the scroll thumb */
 }
-
 .container_memory_lane_pictures::-webkit-scrollbar-track {
     background: #FFFFFF00; /* color of the tracking area */
 }
-
 .container_memory_lane_pictures::-webkit-scrollbar-thumb {
     background-color: #00448999; /* color of the scroll thumb */
     border-radius: 20px; /* roundness of the scroll thumb */
@@ -310,11 +308,9 @@ body::-webkit-scrollbar {
     height: 5px;
     border-radius: 20px; /* roundness of the scroll thumb */
 }
-
 body::-webkit-scrollbar-track {
     background: #FFFFFF00; /* color of the tracking area */
 }
-
 body::-webkit-scrollbar-thumb {
     background-color: #00448999; /* color of the scroll thumb */
     border-radius: 20px; /* roundness of the scroll thumb */
@@ -324,6 +320,9 @@ body::-webkit-scrollbar-thumb {
     height: 250px;
     width: auto;
     margin-bottom: 5px;
+}
+.no_margin{
+    margin: 25px;
 }
 #map{
     height: 70%;
@@ -399,4 +398,103 @@ footer>p{
 footer>p>em{
     font-size: 0.7em;
     font-style: normal;
+}
+
+@media screen and (max-device-width: 500px){
+    .red_title{
+        font-size: 4em;
+        position: relative;
+        bottom: 25px;
+    }
+    .white_title{
+        font-size: 2.5em;
+    }
+    .header_logo{
+        display: none;
+    }
+    nav{
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0 15px 0!important;
+        width: 100%;
+    }
+    nav a{
+        font-size: 1.5em;
+        padding-top: 25px;
+    }
+    body .schedule h6{
+        font-size: 2em!important;
+    }
+    body .schedule p{
+        font-size: 1.5em!important;
+    }
+    .perigueux_section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .perigueux_section>div{
+        width: 100%;
+    }
+    .schedule_section button{
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-device-width: 800px) and (min-device-width: 501px){
+    .red_title{
+        font-size: 4em;
+        position: relative;
+        bottom: 25px;
+    }
+    .white_title{
+        font-size: 2.5em;
+    }
+    .header_logo{
+        display: none;
+    }
+    nav{
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0 15px 0!important;
+        width: 100%;
+    }
+    nav a{
+        font-size: 1.5em;
+        padding-top: 25px;
+    }
+    body .schedule h6{
+        font-size: 2em!important;
+    }
+    body .schedule p{
+        font-size: 1.5em!important;
+    }
+    .perigueux_section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .perigueux_section>div{
+        width: 100%;
+    }
+    .schedule_section button{
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-device-width: 1200px) and (min-device-width: 801px){
+    .red_title{
+        font-size: 5em;
+        position: relative;
+        bottom: 25px;
+    }
+    .white_title{
+        font-size: 3.5em;
+    }
+    .perigueux_section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .perigueux_section>div{
+        width: 100%;
+    }
 }

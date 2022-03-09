@@ -147,7 +147,6 @@
                 <img src="{{ asset('img/IMG05.png') }}" alt="IMG06" title="memory lane 06" />
                 <img src="{{ asset('img/IMG06.png') }}" alt="IMG07" title="memory lane 07" />
                 <img src="{{ asset('img/IMG07.png') }}" alt="IMG08" title="memory lane 08" />
-                <img src="{{ asset('img/IMG08.png') }}" alt="IMG09" title="memory lane 09" />
             </div>
         </section>
 
@@ -158,7 +157,7 @@
             <div class="pricing">
                 <img src="{{ asset('img/money.gif') }}" alt="price" title="price" />
                 <button type="button">ONE PRICE ONLY</button>
-                <h5 class="blue_title">€300</h5>
+                <h5 class="blue_title no_margin">€300</h5>
                 <a href="#form_section">REGISTER</a>
             </div>
         </section>
@@ -167,8 +166,7 @@
         <section id="form_section" class="form_section">
             <h2 class="white_subtitle">Euromeeting 2022</h2>
             <h3 class="red_subtitle">Registration</h3>
-            {# TODO : intégrer le formulaire #}
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdv96WSgKBGqE1pLk0vAp83eL4JmnL4anUnJr-I80UGH9kpBw/viewform?embedded=true" width="640" height="947" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLkCpvVKKlWxp1qDUoM9PsBRcjC-77YE2YPGxLiDFtGl0LJg/viewform?embedded=true" width="640" height="1788" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
         </section>
 
         <footer>
@@ -194,6 +192,7 @@
             let schedule1 = $('#schedule_1');
             let schedule2 = $('#schedule_2');
             let schedule3 = $('#schedule_3');
+            let nav = $('nav');
 
             //MAP SCRIPT
             L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiamVyb21lYnJjaCIsImEiOiJjbDBpNzhlbjQwMTlrM2RwaHh5czVzMnY4In0.77Z3eLZn2VyurcgOrxEjbQ', {
@@ -238,22 +237,22 @@
             scheduleBtn1.click();
 
             if(window.pageYOffset > 200){
-                $('nav').css('padding', '5px 100px 5px 100px');
-                $('nav').css('background-color', '#004489');
+                nav.css('padding', '5px 100px 5px 100px');
+                nav.css('background-color', '#004489');
                 $('.header_logo').css('width', '40px');
             }
 
-            $('body').on('wheel', function (){
+            window.onscroll = function (){
                 if(window.pageYOffset > 200){
-                    $('nav').css('padding', '5px 100px 5px 100px');
-                    $('nav').css('background-color', '#004489');
+                    nav.css('padding', '5px 100px 5px 100px');
+                    nav.css('background-color', '#004489');
                     $('.header_logo').css('width', '40px');
                 }else{
-                    $('nav').css('padding', '25px 100px 25px 100px');
-                    $('nav').css('background-color', '#00448900');
+                    nav.css('padding', '25px 100px 25px 100px');
+                    nav.css('background-color', '#00448900');
                     $('.header_logo').css('width', '70px');
                 }
-            })
+            };
         })
     </script>
 {% endblock %}
